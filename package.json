@@ -22,7 +22,8 @@
   },
   "scripts": {
     "clean": "rimraf dist",
-    "build": "npm run clean && tsc && sed -i '' -e '/import/d' dist/index.js",
+    "build": "npm run clean && tsc",
+    "dev": "npm run clean && tsc -w",
     "postversion": "npm publish && git push --follow-tags",
     "prepublishOnly": "npm run build"
   },

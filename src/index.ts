@@ -1,4 +1,4 @@
-import '@logseq/libs'
+/// <reference types="@logseq/libs" />
 
 /**
  * entry
@@ -8,7 +8,7 @@ function main () {
   logseq.Editor.registerSlashCommand('Sub Page', async () => {
     const page = await logseq.Editor.getCurrentPage()
     if (page) {
-      const name = page.originalName
+      const name: string = page.originalName
       await logseq.Editor.insertAtEditingCursor(`[[${name}/]]`)
     }
   })
