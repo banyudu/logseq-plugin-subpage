@@ -1,6 +1,6 @@
 {
   "name": "logseq-plugin-subpage",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "banyudu <banyudu@gmail.com>",
   "main": "index.html",
   "description": "Quickly add sub-pages",
