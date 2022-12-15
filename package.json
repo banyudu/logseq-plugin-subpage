@@ -1,0 +1,36 @@
+{
+  "name": "logseq-plugin-subpage",
+  "version": "0.0.1",
+  "author": "banyudu <banyudu@gmail.com>",
+  "main": "index.html",
+  "description": "Quickly add sub-pages",
+  "license": "MIT",
+  "files": [
+    "README.md",
+    "LICENSE",
+    "package.json",
+    "icon.png",
+    "dist"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
+  "devDependencies": {
+    "@logseq/libs": "^0.0.12",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.9.4"
+  },
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "npm run clean && tsc && sed -i '' -e '/import/d' dist/index.js",
+    "postversion": "npm publish && git push --follow-tags",
+    "prepublishOnly": "npm run build"
+  },
+  "browserslist": [
+    "chrome 80"
+  ],
+  "logseq": {
+    "id": "logseq-plugin-subpage",
+    "icon": "icon.png"
+  }
+}
